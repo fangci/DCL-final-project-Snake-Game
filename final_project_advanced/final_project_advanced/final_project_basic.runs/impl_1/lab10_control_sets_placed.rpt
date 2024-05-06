@@ -1,0 +1,98 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Fri Dec 22 12:23:32 2023
+| Host         : DESKTOP-GP7VK84 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file lab10_control_sets_placed.rpt
+| Design       : lab10
+| Device       : xc7a35ti
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    80 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     5 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              10 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             182 |           56 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             128 |           57 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+----------------------------+---------------------------------+------------------+----------------+--------------+
+|    Clock Signal   |        Enable Signal       |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+----------------------------+---------------------------------+------------------+----------------+--------------+
+|  clk_divider0/CLK |                            |                                 |                1 |              1 |         1.00 |
+|  clk_divider0/CLK |                            | vs0/reset_n[0]                  |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG    | apple_10[3]_i_1_n_0        | vs0/reset_n[0]                  |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG    |                            | clk_divider0/counter[7]_i_1_n_0 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG    |                            | vs0/SR[0]                       |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG    |                            |                                 |                4 |              9 |         2.25 |
+|  clk_divider0/CLK | vs0/v_count_reg[9]_i_2_n_0 | vs0/v_count_reg[9]_i_1_n_0      |                5 |             10 |         2.00 |
+|  clk_divider0/CLK | vs0/pixel_tick             | vs0/h_count_reg_reg[7]_0[0]     |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG    |                            | vs0/reset_n[0]                  |                7 |             10 |         1.43 |
+|  clk_IBUF_BUFG    | apple_x                    | vs0/reset_n[0]                  |                5 |             11 |         2.20 |
+|  clk_IBUF_BUFG    | apple_y_next[8]_i_1_n_0    | vs0/reset_n[0]                  |                5 |             11 |         2.20 |
+|  clk_IBUF_BUFG    | vs0/pixel_tick             | vs0/mod2_reg_reg_0[0]           |                7 |             12 |         1.71 |
+|  clk_IBUF_BUFG    |                            | vs0/h_count_reg_reg[4]_1[0]     |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG    |                            | btn_db0/clear                   |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG    |                            | btn_db1/clear                   |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG    |                            | btn_db2/clear                   |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG    |                            | btn_db3/clear                   |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG    |                            | apple_clock[0]_i_1_n_0          |                7 |             26 |         3.71 |
+|  clk_IBUF_BUFG    |                            | snake_clock0                    |                7 |             26 |         3.71 |
+|  clk_IBUF_BUFG    | p_30_out                   | btn_db0/SR[0]                   |               29 |             70 |         2.41 |
++-------------------+----------------------------+---------------------------------+------------------+----------------+--------------+
+
+

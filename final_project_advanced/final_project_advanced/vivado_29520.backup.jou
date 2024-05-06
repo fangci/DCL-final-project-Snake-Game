@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Dec 21 16:44:26 2023
+# Process ID: 29520
+# Current directory: D:/final_project_basic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31464 D:\final_project_basic\final_project_basic.xpr
+# Log file: D:/final_project_basic/vivado.log
+# Journal file: D:/final_project_basic\vivado.jou
+# Running On: DESKTOP-1C55NKF, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16858 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/final_project_basic/final_project_basic.xpr
+update_compile_order -fileset sources_1
